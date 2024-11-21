@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "d4532c0c-4c95-4b85-91f0-b965302a5d7e",
+		"name": "Aula 1 - Pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39848392"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Localiza pokemon com sucesso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bubble\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/piplup",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"piplup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Não localiza pokemon (não existe)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/felps",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"felps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint falho localiza pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemo/piplup",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemo",
+								"piplup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
