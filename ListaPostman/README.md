@@ -36,7 +36,7 @@ Os testes foram organizados nas seguintes categorias de operações:
     "userId": 1
   }
 
-  ### **3. PUT**
+### **3. PUT**
 - **UpdateResource**: Atualiza um recurso existente com dados válidos. 
   **Exemplo:** `PUT /posts/1`  
   **Corpo da requisição:**  
