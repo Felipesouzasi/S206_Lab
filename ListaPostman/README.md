@@ -41,11 +41,12 @@ Os testes foram organizados nas seguintes categorias de operações:
   **Exemplo:** `PUT /posts/1`  
   **Corpo da requisição:**  
   ```json
-{
-  "title": "Post Atualizado",
-  "body": "Conteúdo atualizado",
-  "userId": 1
-}
+
+    {
+    "title": "Post Atualizado",
+    "body": "Conteúdo atualizado",
+    "userId": 1
+    }
 Resultado esperado: Recurso atualizado com sucesso.
 
 ### **NoUpdateResource**
