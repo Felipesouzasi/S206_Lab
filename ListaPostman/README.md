@@ -9,6 +9,18 @@ O objetivo é validar endpoints RESTful da API JsonPlaceholder através de teste
 
 ---
 
+## 📄 Perguntas presentes na lista
+1- **Os testes desenvolvidos são manuais ou automtizados?**
+      - Automatizados
+
+2- **Alguns desses testes são End-to-end (e2e)?**
+      -  Nào, pois os teste e2e (end-to-end) verifica se fluxo **completo** de um software esta de acordo com o planejado. Nesse caso, a gente realiza testes de APIs esperando respostas do endpoint.
+
+3- **O que se deve fazer para que os testes desenvolvidos funcionem em modo de regressão?**
+      - Deve realizar alguma alteração no código e executar todas as suítes de testes desenvolvidas e já verificadas, a fim de detectar se essa alteração causou algum erro, ou seja, teste de regressão
+
+---
+
 ## 📋 Funcionalidades Testadas
 Os testes foram organizados nas seguintes categorias de operações:
 
